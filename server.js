@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // Render antaa portin tänne
 
 // Palvellaan public-kansion tiedostot
 app.use(express.static(path.join(__dirname, 'public')));
@@ -13,5 +13,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Palvelin käynnissä: http://localhost:${PORT}`);
+  console.log(`✅ Palvelin käynnissä portissa ${PORT}`);
 });
