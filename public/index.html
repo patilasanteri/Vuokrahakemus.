@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vuokrahakemus – Mummonmökki, Lohja</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f7f8fb; margin: 0; padding: 20px; }
+  .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  h1 { margin-top: 0; color: #2b7a78; }
+  label { display: block; margin-top: 12px; font-weight: bold; }
+  input, select, textarea { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; }
+  textarea { min-height: 100px; }
+  button { margin-top: 16px; padding: 10px 16px; background: #2b7a78; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; }
+  button:hover { background: #22615f; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Vuokrahakemus – Mummonmökki (Lohja)</h1>
+  <p>Täytä lomake huolellisesti. Hakemuksesi lähetetään vuokranantajalle sähköpostitse.</p>
+
+  <form action="https://formspree.io/f/xeozvlzv" method="POST">
+    <label>Nimi *</label>
+    <input type="text" name="Nimi" required>
+
+    <label>Syntymäaika</label>
+    <input type="date" name="Syntymäaika">
+
+    <label>Puhelinnumero *</label>
+    <input type="tel" name="Puhelin" required>
+
+    <label>Sähköposti *</label>
+    <input type="email" name="Sähköposti" required>
+
+    <label>Nykyinen osoite</label>
+    <input type="text" name="Osoite">
+
+    <label>Nykyinen asumismuoto</label>
+    <select name="Asumismuoto">
+      <option value="">— Valitse —</option>
+      <option>Omistusasunto</option>
+      <option>Vuokra-asunto</option>
+      <option>Muu</option>
+    </select>
+
+    <label>Työ-/opiskelutilanne</label>
+    <input type="text" name="Työtilanne">
+
+    <label>Kuukausitulot (netto)</label>
+    <input type="number" name="Kuukausitulot" min="0" step="1">
+
+    <label>Miksi olet muuttamassa?</label>
+    <input type="text" name="Muuton syy">
+
+    <label>Kokemus vanhassa rakennuksessa asumisesta</label>
+    <select name="Vanha rakennus kokemus">
+      <option>Kyllä</option>
+      <option>Ei</option>
+    </select>
+
+    <label>Osaaminen</label>
+    <textarea name="Osaaminen" placeholder="Esim. puutarhanhoito, pienet korjaukset, maalaus..."></textarea>
+
+    <label>Miksi olisit hyvä vuokralainen tälle mökille?</label>
+    <textarea name="Motivaatio" maxlength="1000"></textarea>
+
+    <label>Kuinka monta henkilöä muuttaisi?</label>
+    <input type="number" name="Asukkaiden määrä" min="1" step="1">
+
+    <label>Lemmikit</label>
+    <input type="text" name="Lemmikit">
+
+    <label>Mahdollinen muuttopäivä</label>
+    <input type="date" name="Muuttopäivä">
+
+    <label>Vuokrasuhteen kesto</label>
+    <select name="Kesto">
+      <option value="">— Valitse —</option>
+      <option>6 kk</option>
+      <option>12 kk</option>
+      <option>yli 12 kk</option>
+      <option>Muu</option>
+    </select>
+
+    <label>Luottotiedot kunnossa?</label>
+    <select name="Luottotiedot">
+      <option>Kyllä</option>
+      <option>Ei</option>
+      <option>En halua kertoa</option>
+    </select>
+
+    <label>Linkki liitteisiin (esim. Google Drive)</label>
+    <input type="url" name="Liitelinkki" placeholder="https://...">
+
+    <button type="submit">Lähetä hakemus</button>
+  </form>
+</div>
+
+</body>
+</html>
